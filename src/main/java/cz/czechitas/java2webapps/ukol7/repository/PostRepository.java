@@ -7,10 +7,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
-    Post findBySlug(String slug);
+
+    Optional<Post> findBySlug(String slug);
 
     Page<Post> findByPublishedBeforeOrderByPublishedDesc(LocalDate now, Pageable pageable);
 }
