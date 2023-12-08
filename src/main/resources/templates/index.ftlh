@@ -51,7 +51,7 @@
 
         .pager {
             position: absolute;
-            bottom: 20px; /* Adjust the distance from the bottom */
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -66,7 +66,7 @@
             color: #000;
         }
 
-        .page.active {
+        .page.cannotContinue {
             color: #c0bcbc;
         }
     </style>
@@ -88,8 +88,8 @@
     [/#list]
 
     <div class="pager">
-        [@pager.pagerLink page=postList.number - 1 active=postList.first text=" 🢀 " /]
-        [@pager.pagerLink page=postList.number + 1 active=postList.last text=" 🢂 " /]
+        [@pager.pagerLink page=postList.number - 1 linkCanContinue=postList.hasPrevious() text=" 🢀 " /]
+        [@pager.pagerLink page=postList.number + 1 linkCanContinue=postList.hasNext() text=" 🢂 " /]
     </div>
 
 </div>
