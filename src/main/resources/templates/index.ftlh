@@ -30,7 +30,8 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            width: 350px;
+            height: 300px;
         }
 
         .entry-content {
@@ -41,11 +42,39 @@
             margin-top: 15px;
             width: 100%;
         }
+
+        .container.entries {
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        .pager {
+            position: absolute;
+            bottom: 20px; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        .page {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .page.active {
+            color: #c0bcbc;
+        }
     </style>
 </head>
 <body>
 
 <div class="container entries">
+
     [#list postList.content as post]
         <div class="entry">
             <div class="entry-content">
@@ -57,6 +86,12 @@
             <a href="/post/${post.slug}" class="btn btn-primary read-more">Read</a>
         </div>
     [/#list]
+
+    <div class="pager">
+        [@pager.pagerLink page=postList.number - 1 active=postList.first text=" 🢀 " /]
+        [@pager.pagerLink page=postList.number + 1 active=postList.last text=" 🢂 " /]
+    </div>
+
 </div>
 
 </body>
