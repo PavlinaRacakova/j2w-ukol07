@@ -3,19 +3,17 @@ package cz.czechitas.java2webapps.ukol7.service;
 import cz.czechitas.java2webapps.ukol7.entity.Post;
 import cz.czechitas.java2webapps.ukol7.repository.PostRepository;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 @Service
 public class PostService {
 
-    PostRepository repository;
+    private final PostRepository repository;
 
     public PostService(PostRepository repository) {
         this.repository = repository;
@@ -26,6 +24,7 @@ public class PostService {
     }
 
     public Post singlePost(String slug) {
-        return repository.findBySlug(slug).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        return repository.findBySlug(slug)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 }
