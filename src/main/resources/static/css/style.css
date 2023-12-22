@@ -1,0 +1,128 @@
+body {
+    background: url("https://source.unsplash.com/blue-and-pink-light-illustration-LeG68PrXA6Y") no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-new {
+    margin-bottom: 20px;
+}
+
+.back-home {
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.pager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.page.cannotContinue {
+    color: #c0bcbc;
+}
+
+.entry-table {
+    width: 100%;
+    background-color: #f1f9ff;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.entry-table th,
+.entry-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.entry-table th {
+    background-color: #e1e1e1;
+}
+
+.entry-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn {
+    margin-left: 10px;
+}
+
+h5 {
+    font-style: italic;
+}
+
+.detail-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #f1f9ff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-btn {
+    margin-top: 20px;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 15px;
+    background-color: #f1f9ff;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.title {
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    background-color: transparent;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    align-self: flex-end;
+}

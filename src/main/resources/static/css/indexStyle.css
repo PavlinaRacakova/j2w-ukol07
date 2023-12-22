@@ -1,0 +1,79 @@
+body {
+    background: url("https://source.unsplash.com/blue-and-pink-light-illustration-LeG68PrXA6Y") no-repeat center center fixed;
+    background-size: cover;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.entry {
+    padding: 15px;
+    background-color: #f1f9ff;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 300px;
+}
+
+.entry-content {
+    flex-grow: 1;
+}
+
+.read-more {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.container.entries {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.pager {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.page {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.page.cannotContinue {
+    color: #c0bcbc;
+}
+
+.admin-button {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    z-index: 999;
+}
+
+.admin-button a.btn {
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.admin-button a.btn:hover {
+    background-color: #0056b3;
+}

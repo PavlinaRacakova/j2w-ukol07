@@ -1,7 +1,7 @@
 package cz.czechitas.java2webapps.ukol7.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
@@ -15,25 +15,24 @@ public class Post {
     private Long id;
 
     @Size(max = 100)
-    @NotNull
     @Column(name = "SLUG", nullable = false, length = 100)
     private String slug;
 
     @Size(max = 100)
-    @NotNull
+    @NotEmpty
     @Column(name = "AUTHOR", nullable = false, length = 100)
     private String author;
 
     @Size(max = 255)
-    @NotNull
+    @NotEmpty
     @Column(name = "TITLE", nullable = false)
     private String title;
 
-    @NotNull
+    @NotEmpty
     @Column(name = "PEREX", nullable = false)
     private String perex;
 
-    @NotNull
+    @NotEmpty
     @Column(name = "BODY", nullable = false)
     private String body;
 
